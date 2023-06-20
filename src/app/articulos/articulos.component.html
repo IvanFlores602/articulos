@@ -1,0 +1,13 @@
+
+
+<div *ngIf="hayRegistros(); else sinarticulos">
+    
+    <div *ngFor="let art of Todoslosarticulos">
+        <div><p>{{art.ruta}}</p></div>
+        <div>{{art.descripcion}}</div>
+        <div>{{art.precio}}</div>
+    </div>
+</div>
+
+
+<ng-template #sinarticulos> <p>No hay articulos</p> </ng-template>
